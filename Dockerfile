@@ -1,5 +1,5 @@
 # --- Stage 1: build the frontend static files ---
-FROM node:22-alpine AS frontend
+FROM node:25-alpine AS frontend
 WORKDIR /frontend
 COPY _frontend/ ./
 RUN node build.mjs
