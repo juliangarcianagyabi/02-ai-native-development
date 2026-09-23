@@ -5,7 +5,7 @@ COPY _frontend/ ./
 RUN node build.mjs
 
 # --- Stage 2: Python image running the backend, which also serves the frontend ---
-FROM python:3.12-slim
+FROM python:3.14-slim
 # The frontend is served from the same origin as the API, so CORS is off.
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
